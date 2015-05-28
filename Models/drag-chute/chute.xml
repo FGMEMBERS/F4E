@@ -1,0 +1,70 @@
+<?xml version = '1.0' ?>
+<PropertyList>
+
+<!-- Braking Chute -->
+
+<path>chute.ac</path>
+
+	<animation>
+	<type>select</type>
+	<object-name>parachute</object-name>
+	<condition>
+		<and>
+			<property>controls/flight/drag-chute-deployed</property>
+			<not>
+				<property>controls/flight/drag-chute-jettison</property>
+				<value type="bool">false</value>
+			</not>
+		</and>
+	</condition>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>parachute</object-name>
+		<property>orientation/alpha-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>	
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>	
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>parachute</object-name>
+		<property>orientation/side-slip-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>	
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>	
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>parachute</object-name>
+		<property>orientation/roll-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>	
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>	
+	</animation>
+
+</PropertyList>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<!--
+F4E Radar panel.
+David Culp, davidculp2@comcast.net, March 2003
+Ronald Jensen, ron@jentronics.com, January 2007
+License:  GPL
+_______________________________________________________________________
+-->
+
+<PropertyList>
+ <name>F4E Panel</name>
+ <background>Aircraft/F4E/Panels/Textures/background.rgb</background>
+ <w>300</w>
+ <h>300</h>
+ <y-offset>0</y-offset>
+ <view-height>768</view-height>
+
+ <instruments>
+  <instrument include="../../Instruments/radar.xml">
+   <name>Radar</name>
+   <condition>
+    <equals>
+     <property>instrumentation/radar/minimized</property>
+     <value>false</value>
+    </equals>
+   </condition>
+   <x>150</x>
+   <y>150</y>
+   <w>256</w>
+   <h>256</h>
+  </instrument>
+
+  <instrument include="../../Instruments/radar-minimized.xml">
+   <name>Radar-minimized</name>
+   <condition>
+    <equals>
+     <property>instrumentation/radar/minimized</property>
+     <value>true</value>
+    </equals>
+   </condition>
+   <x>10</x>
+   <y>10</y>
+   <w>44</w>
+   <h>16</h>
+  </instrument>
+
+ </instruments>
+
+</PropertyList>

@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+
+<!-- F4E Weapons Panel -->
+
+<PropertyList>
+
+ <path>weaponspanel.ac</path>
+
+<!-- Master Arm -->
+<animation>
+  <type>pick</type>
+  <object-name>masterarm</object-name>
+  <repeatable>false</repeatable>
+  <action>
+    <button>0</button>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/armament/master-arm</property>
+    </binding>
+  </action>
+</animation>
+<animation>
+  <type>rotate</type>
+  <object-name>masterarm</object-name>
+  <property>controls/armament/master-arm</property>
+  <factor>-45</factor>
+  <offset>0.5</offset>
+  <center>
+   <x-m> 0.0001</x-m>
+   <y-m>-0.156491</y-m>
+   <z-m> 0.184557</z-m>
+  </center> 
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+</animation>
+
+<!-- Flight Intruments -->
+<animation>
+  <type>pick</type>
+  <object-name>knob-fltinst</object-name>
+  <action>
+    <button>0</button>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/lighting/instruments-norm</property>
+      <step>0.1</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>0</wrap>
+     </binding>
+   </action>
+  <action>
+    <button>1</button>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/lighting/instruments-norm</property>
+      <step>-0.1</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>0</wrap>
+     </binding>
+   </action>
+   
+     <action>
+       <button>4</button>
+       <binding>
+         <command>property-adjust</command>
+         <property>controls/lighting/instruments-norm</property>
+         <step>0.1</step>
+         <min>0</min>
+         <max>1</max>
+         <wrap>0</wrap>
+        </binding>
+      </action>
+     <action>
+       <button>3</button>
+       <binding>
+         <command>property-adjust</command>
+         <property>controls/lighting/instruments-norm</property>
+         <step>-0.1</step>
+         <min>0</min>
+         <max>1</max>
+         <wrap>0</wrap>
+        </binding>
+      </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>knob-fltinst</object-name>
+  <property>controls/lighting/instruments-norm</property>
+  <factor>-300</factor>
+  <offset>-0.5</offset>
+  <center>
+   <x-m> 0.009929</x-m>
+   <y-m>-0.272024</y-m>
+   <z-m> 0.260513</z-m>
+  </center> 
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+</animation>
+
+<!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>50</max-m>
+ </animation>
+</PropertyList>
